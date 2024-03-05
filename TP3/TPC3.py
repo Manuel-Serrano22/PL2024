@@ -8,17 +8,16 @@ def processarSomador(nomeFicheiro):
     with open(nomeFicheiro, "r", encoding="utf-8") as file1:
         for linha in file1:
             padrao = re.findall(r"(\bon\b)|(\boff\b)|((?:\+|-)?\b\d+\b)|(?<=\^|\s)(=)(?=\s|$)", linha, re.IGNORECASE)
-            lista = [elem for tuplo in padrao for elem in tuplo if elem]
 
-            for elem in lista:
-                if elem.lower() == "off":
+            for on2, off, num, igual in padrao:
+                if off:
                     on = False
-                elif elem.lower() == "on":
+                elif on2:
                     on = True
-                elif elem == "=":
+                elif igual:
                     print(contador)
                 elif on:
-                    contador += int(elem)
+                    contador += int(num)
 
 
 def main():
