@@ -13,7 +13,7 @@ tokens = (
 )
 
 def t_Numero(t):
-    r"(\d)+(.\d{1,2})?"
+    r"(\+|-)?(\d+)(.\d{1,2})?"
     return t
 
 def t_Select(t):
