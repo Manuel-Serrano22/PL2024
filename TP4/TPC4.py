@@ -17,15 +17,15 @@ def t_Numero(t):
     return t
 
 def t_Select(t):
-    r"\bSelect\b"
+    r"(?i)\bSelect\b"
     return t
 
 def t_From(t):
-    r"\bfrom\b"
+    r"(?i)\bfrom\b"
     return t
 
 def t_Where(t):
-    r"\bwhere\b"
+    r"(?i)\bwhere\b"
     return t
 
 def t_MaiorQue(t):
