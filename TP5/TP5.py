@@ -123,6 +123,7 @@ def t_Sair(t):
     trocoNovo = formatarTroco(troco)
     print(f"Pode retirar o troco: {trocoNovo}")
     print("Até à próxima.")
+    exit()
 
 
 def t_newline(t):
